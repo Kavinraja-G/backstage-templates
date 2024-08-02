@@ -64,8 +64,8 @@ jobs:
         tfPlanOutputPath: ${{ env.WORKING_DIR }}tfplan.json
         config: |
           ec2:
-            enabled: "${{ vars.ec2_enabled }}"
-            allowedInstanceTypeRegEx: "${{ vars.allowed_ec2_instance_types }}"
+            enabled: ${{ vars.ec2_enabled }}
+            allowedInstanceTypeRegEx: ${{ vars.allowed_ec2_instance_types }}
           tags:
-            enabled: "${{ vars.tags_enabled }}"
-            allowedBillingTags: "${{ vars.allowed_billing_tags }}"
+            enabled: ${{ vars.tags_enabled }}
+            allowedBillingTags: ${{ vars.allowed_billing_tags }}
